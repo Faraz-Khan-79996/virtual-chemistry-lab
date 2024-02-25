@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+* {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
+html{
+	scroll-behavior: smooth;
+}
+body {
+	background-color:white ;
+}
+.section-padding {
+	padding: 120px 0;
+} 
+
+/* Banner start */
+.banner_wrapper{
+	/* background-image: url("faraz_img/banner.jpg"); */
+	background: url(../faraz_img/banner3.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0;
+	padding-top: 30px;
+	padding-bottom: 100px;
+	color: white;
+	transition: 2s;
+
+	animation-name: animate;
+	animation-direction: alternate-reverse;
+	animation-duration: 20s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes animate{
+	0%{
+		background-image: url(../faraz_img/banner3.jpg);
+	}
+	25%{
+		background-image: url(../faraz_img/bg3.jpg);
+	}
+	50%{
+		background-image: url(../faraz_img/bg2.jpg);
+	}
+	75%{
+		background-image: url(../faraz_img/bg4.webp);
+	}
+}
+/* Banner end */
+
+.my_card{
+	transition: all 0.3s;
+}
+.hover_effect:hover{
+	transform: scale(1.05);
+	box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+}
+.my_rounding{
+	border-radius: 10%;
+	transition: all 0.3s;
+}
+.shadow{
+	box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.team .card-body i {
+	font-size: 20px;
+}
+
+.go_top_btn{
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(2, 2, 2, 0.525);
+	bottom: 30px;
+	right: 20px;
+	/* text-decoration: none; */
+	line-height: 50px;
+	color: white;
+}

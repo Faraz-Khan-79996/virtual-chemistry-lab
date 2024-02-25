@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MadTitans</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="faraz_img/fevicon1.png">
+
+    <!-- All CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#goTop">
+
+    <!-- Navbar start -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="faraz_img/Logo3.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#technologies">Technologies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#team">Team</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                                data-bs-target="#log_in">
+                                Log in
+                            </button>
+                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                                data-bs-target="#sign_up">
+                                Sign Up
+                            </button>
+                            <!-- <a href="second_page/second.html" class="btn btn-outline-danger"><strong>VEM</strong></a> -->
+                        </div>
+                    </li>
+                </ul>
+                <div class="ms-auto d-none d-lg-block">
+                    <div class="input-group">
+                        <span class="border-warning input-group-text bg-warning text-white"><i
+                                class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" class="form-control border-warning" style="color:#7a7a7a">
+                        <button class="btn btn-warning text-white">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+
+
+    <!-- log_in Modal start -->
+    <div class="modal fade" id="log_in" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><strong>Mad Titans</strong></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3 row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail"
+                                value="email@example.com">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-success">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- log_in Modal end -->
+
+
+
+    <!-- Sign_up Modal start -->
+    <div class="modal fade" id="sign_up" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><strong>Mad Titans</strong></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-4">
+                            <label for="validationCustom01" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="Faraz" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustom02" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="validationCustom02" value="Khan" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustomUsername" class="form-label">Username</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                <input type="text" class="form-control" id="validationCustomUsername"
+                                    aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                    Please choose a username.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="validationCustom03" class="form-label">Enter password</label>
+                            <input type="text" class="form-control" id="validationCustom03" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid password.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="validationCustom05" class="form-label">Enter password again</label>
+                            <input type="text" class="form-control" id="validationCustom05" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid password.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                    Agree to terms and conditions
+                                </label>
+                                <div class="invalid-feedback">
+                                    You must agree before submitting.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-outline-success" type="submit">Submit form</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-success">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sign_up Modal end -->
+
+
+
+    <!-- Website banner start -->
+    <section id="home">
+        <div class="banner_wrapper">
+            <div class="container">
+                <div class="row mt-5 pt-5">
+                    <div class="col-md-6">
+                        <h2 class="display-6 fw-bold">Welcome to the Virtual Chemistry Laboratory!</h2>
+                        <P class="mt-5"><a href="second_page/second.html"><button type="button"
+                                    class="btn btn-danger position-relative">
+                                    <strong>VIRTUAL SIMULATION ENVIRONMENT</strong>
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+                                        new!
+                                        <span class="visually-hidden">unread messages</span>
+                                    </span>
+                                </button></a></P>
+                        <p class="mt-5 pt-5 fs-5">Explore the world of chemistry from the comfort of your own home. Our
+                            virtual chemistry
+                            laboratory provides a unique and immersive experience for learners of all ages.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Website banner End -->
+
+
+
+    <!-- about section starts -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <!-- <div class="row"> -->
+            <!-- <div class="col-lg-4 col-md-12 col-12">
+                    <div class="about-img">
+                        <img src="faraz_img/img1.jpg" alt="" class="img-fluid">
+                    </div>
+                </div> -->
+            <!-- <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5"> -->
+            <div class="about-text">
+                <h2 class="mb-5">Exploring Chemistry Virtually, Safely, <br /> and Creatively.</h2>
+                <p class="mb-5">Welcome to our virtual chemistry laboratory, where the fascination for chemistry meets
+                    the
+                    convenience of online learning. At <strong>MADTITANS</strong>, our mission is to make the world of
+                    chemistry accessible to learners of all levels and ages, inspiring curiosity and a deeper
+                    understanding of this captivating field. Founded with a passion for education and a commitment to
+                    safety, our virtual lab has evolved into a platform that empowers students, educators, and
+                    enthusiasts to explore and experiment with chemistry in a virtual, risk-free environment. With a
+                    dedication to excellence and innovation, we continue to push the boundaries of online science
+                    education. Join us on this educational journey as we explore the wonders of chemistry together.
+                    Whether you're a student, a teacher, or simply curious about the world of science, our virtual
+                    chemistry laboratory is here to inspire and guide you.</p>
+                <a href="#!" class="btn btn-warning">Learn More</a>
+            </div>
+            <!-- </div> -->
+            <!-- </div> -->
+        </div>
+    </section>
+    <section id="parteners">
+        <div class="container">
+            <div class="row mb-4">
+                <h2>In Collaboration with</h2>
+            </div>
+            <div class="row">
+                <div class="card col hover_effect my_card" style="width: 18rem;">
+                    <img src="faraz_img/university1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">University of California Berkeley, USA</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#!" class="btn bg-warning text-dark">Learn more</a>
+                    </div>
+                </div>
+                <div class="card col hover_effect my_card" style="width: 18rem;">
+                    <img src="faraz_img/university2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">University of Science & Technology of China</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#!" class="btn bg-warning text-dark">Learn more</a>
+                    </div>
+                </div>
+                <div class="card col hover_effect my_card" style="width: 18rem;">
+                    <img src="faraz_img/university3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">University of Science & Technology of China</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#!" class="btn bg-warning text-dark">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about section Ends -->
+
+
+
+    <!-- technologies section Starts -->
+    <section class="technologies section-padding mt-5" id="technologies"
+        style="background-image: url(faraz_img/background_for_services.webp)">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2 class="text-white display-2">Our Technologies</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="text-center pb-5 pt-4 my_rounding border hover_effect bg-light">
+                        <div class="mb-5">
+                            <img src="faraz_img/tech_1.png">
+                        </div>
+                        <div>
+                            <h4 class="mb-4">Advanced Simulations</h4>
+                            <p> Experience highly realistic chemistry through cutting-edge simulations</p>
+                            <a href="#!" class="btn bg-warning text-dark">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="text-center pb-5 pt-4 my_rounding border hover_effect bg-light">
+                        <div class="mb-5">
+                            <img src="faraz_img/tech_2.jpg">
+                        </div>
+                        <div>
+                            <h4 class="mb-4">Customizable Experiments</h4>
+                            <p>Tailor experiments to match your educational goals, allowing flexibility</p>
+                            <a href="#!" class="btn bg-warning text-dark">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="text-center pb-5 pt-4 my_rounding border hover_effect bg-light">
+                        <div class="mb-5">
+                            <img src="faraz_img/tech_3.jpg">
+                        </div>
+                        <div>
+                            <h4 class="mb-4">Collaborative Learning</h4>
+                            <p>Foster collaboration among students and educators, enabling shared experiments</p>
+                            <a href="#!" class="btn bg-warning text-dark">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div>
+            <div class="row"> -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="text-center pb-5 pt-4 my_rounding border hover_effect bg-light">
+                        <div class="mb-5">
+                            <img src="faraz_img/tech_1.png">
+                        </div>
+                        <div>
+                            <h4 class="mb-4">Data Analysis algorithms</h4>
+                            <p>Access sophisticated data analysis tools to interpret experimental results</p>
+                            <a href="#!" class="btn bg-warning text-dark">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="text-center pb-5 pt-4 my_rounding border hover_effect bg-light">
+                        <div class="mb-5">
+                            <img src="faraz_img/temp.png">
+                        </div>
+                        <div>
+                            <h4 class="mb-4">Interactive Laboratory</h4>
+                            <p>Enjoy fully interactive laboratories with 3D models, interactive instruments</p>
+                            <a href="#!" class="btn bg-warning text-dark">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="text-center pb-5 pt-4 my_rounding border hover_effect bg-light">
+                        <div class="mb-5">
+                            <img src="faraz_img/tech_6.jpg">
+                        </div>
+                        <div>
+                            <h4 class="mb-4">AI-Powered Guidance</h4>
+                            <p>Benefit from AI-driven assistance that offers personalized experiment</p>
+                            <a href="#!" class="btn bg-warning text-dark">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- technologies section Ends -->
+
+
+
+    <!-- portfolio starts -->
+    <section id="portfolio" class="portfolio section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2 class="display-4 m-5">Our Projects</h2>
+                        <p class="fs-5">Our projects are pioneering advancements in virtual chemistry education,
+                            offering interactive
+                            simulations and personalized guidance, transforming how chemistry is learned and understood.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-white pb-2 my_card hover_effect shadow">
+                        <div class="card-body text-dark">
+                            <div class="img-area mb-4">
+                                <img src="faraz_img/card_img_1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <h3 class="card-title">Nuclear</h3>
+                            <p class="lead">Nuclear power research focuses on harnessing the immense energy
+                                potential of nuclear reactions for sustainable electricity generation</p>
+                            <button class="btn bg-warning text-dark">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-white pb-2 my_card hover_effect shadow">
+                        <div class="card-body text-dark">
+                            <div class="img-area mb-4">
+                                <img src="faraz_img/card_img_2.jpg" class="img-fluid" alt="">
+                            </div>
+                            <h3 class="card-title">Fusion</h3>
+                            <p class="lead">Our fusion research is at the forefront of harnessing the power of the sun.
+                                We are actively exploring controlled nuclear fusion as energy source.</p>
+                            <button class="btn bg-warning text-dark">learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-white pb-2 my_card hover_effect shadow">
+                        <div class="card-body text-dark">
+                            <div class="img-area mb-4">
+                                <img src="faraz_img/card_img_3.jpg" class="img-fluid" alt="">
+                            </div>
+                            <h3 class="card-title">Fission</h3>
+                            <p class="lead">We work to develop innovative fuel technologies and reactor designs to
+                                ensure responsible and reliable nuclear energy production.</p>
+                            <button class="btn bg-warning text-dark">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- portfolio ends -->
+
+
+
+    <!-- team starts -->
+    <section class="team section-padding" id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2 class="display-2">Our Team</h2>
+                        <p class="mt-4 fs-5">Our team is composed of dedicated professionals who share a passion for
+                            revolutionizing
+                            chemistry education. With diverse backgrounds in science, education, and technology, we
+                            collaborate tirelessly to create an immersive and effective virtual laboratory. Together, we
+                            aim to make complex chemistry concepts accessible and engaging for learners worldwide.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="card text-center my_card hover_effect my_rounding shadow">
+                        <div class="card-body">
+                            <img src="faraz_img/faraz.jpg" alt="" class="img-fluid rounded-circle">
+                            <h3 class="card-title py-2">Faraz</h3>
+                            <p class="card-text">Leading the lab's scientific innovations, his expertise
+                                drives our cutting-edge simulations and experiments</p>
+                            <p class="socials">
+                                <i class="bi bi-twitter text-dark mx-1"></i>
+                                <i class="bi bi-facebook text-dark mx-1"></i>
+                                <i class="bi bi-linkedin text-dark mx-1"></i>
+                                <i class="bi bi-instagram text-dark mx-1"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card text-center my_card hover_effect my_rounding shadow">
+                        <div class="card-body">
+                            <img src="faraz_img/prateek.jpg" alt="" class="img-fluid rounded-circle">
+                            <h3 class="card-title py-2">Prateek</h3>
+                            <p class="card-text">Instrumental in developing our AI-guided platform, his expertise
+                                ensures personalized learning experiences for all.</p>
+                            <p class="socials">
+                                <i class="bi bi-twitter text-dark mx-1"></i>
+                                <i class="bi bi-facebook text-dark mx-1"></i>
+                                <i class="bi bi-linkedin text-dark mx-1"></i>
+                                <i class="bi bi-instagram text-dark mx-1"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- team ends -->
+
+
+    <!-- Footer start-->
+    <footer class="text-center text-white" style="background-color:#3a3a3a">
+        <div class="container">
+            <section class="mt-5">
+                <div class="row text-center d-flex justify-content-center pt-5">
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="#about" class="text-white">About us</a>
+                        </h6>
+                    </div>
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="#technologies" class="text-white">Technologies</a>
+                        </h6>
+                    </div>
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="#parteners" class="text-white">Partners</a>
+                        </h6>
+                    </div>
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="#!" class="text-white">Help</a>
+                        </h6>
+                    </div>
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a class="text-white" data-bs-toggle="modal" data-bs-target="#sign_up">Contact</a>
+                        </h6>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="my-5" />
+
+            <section class="mb-3">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-10">
+                        <p>
+                            Thank you for visiting <strong>MADTITANS</strong>. Our virtual chemistry laboratory is
+                            committed
+                            to fostering a passion for science, making education accessible, and advancing the frontiers
+                            of chemistry. Explore our wide range of experiments, learn from our informative blog, and
+                            don't hesitate to reach out with any questions. Connect with us on social media for the
+                            latest updates and insights. Your learning journey begins here.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2020 Copyright:
+            <a class="text-white"
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUIcmlja3JvbGw%3D">MadTitans.com</a>
+        </div>
+
+    </footer>
+    <!-- Footer end-->
+
+    <!-- to top -->
+        <a href="#" class="go_top_btn"><i class="bi bi-arrow-up-circle"></i></a>
+        <a href="#!" class="go_top_btn mb-5" data-bs-toggle="modal" data-bs-target="#help"><i class="bi bi-question-circle-fill"></i></a>
+    <!-- to top -->
+
+    <!-- Modal for help -->
+<div class="modal fade" id="help" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Need Help?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Write your queries here...</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-warning">Get help</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Modal for help -->
+
+
+    <!-- All Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+<!--for getting the form download the code from download button-->
